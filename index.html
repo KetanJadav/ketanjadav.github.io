@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0C0A1F">
+<title>Ketan Jadav</title>
+<meta name="description" content="Ketan Jadav is a PhD student in experimental particle physics at the University of Oklahoma, working on top-quark physics and the ATLAS Inner Tracker upgrade.">
+<meta property="og:title" content="Ketan Jadav">
+<meta property="og:description" content="PhD student in experimental particle physics at the University of Oklahoma.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ketan Jadav",
+  "alternateName": "Ketankumar M. Jadav",
+  "jobTitle": "PhD student in physics",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Oklahoma"
+  },
+  "alumniOf": "Indian Institute of Science Education and Research Bhopal",
+  "email": "mailto:ketan.jadav@ou.edu",
+  "sameAs": [
+    "https://orcid.org/0009-0008-3128-8832",
+    "https://www.linkedin.com/in/ketan-jadav-1a1375224/"
+  ]
+}
+</script>
+<style>
+:root {
+  /* Layout: one dark, luminous world. A live event display leads the page, and its momentum
+     color scale (violet for low, yellow for high) runs down the page, one stop per section. */
+  --bg: #0C0A1F;
+  --raise: #15112F;
+  --ink: #F1EEFB;
+  --muted: #A9A3CC;
+  --line: #2B2557;
+  --s1: #FFE45C;
+  --s2: #FFA83D;
+  --s3: #FF7A59;
+  --s4: #F0508F;
+  --s5: #C768E8;
+  --s6: #8E8BFF;
+  --scale: linear-gradient(90deg, #6A5BFF, #C04BE8, #F0508F, #FF8A3C, #FFE45C);
+  --serif: "STIX Two Text", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.62;
+}
+.wrap {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.15rem, 4vw, 2.5rem);
+}
+a {
+  color: var(--accent, var(--s6));
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.06em;
+}
+a:hover { text-decoration-thickness: 0.12em; }
+:focus-visible {
+  outline: 2px solid var(--s1);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.skip {
+  position: absolute;
+  left: -999rem;
+  font-family: var(--sans);
+}
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 3;
+  background: var(--raise);
+  color: var(--ink);
+  padding: 0.5rem 0.8rem;
+}
+
+/* Masthead */
+.masthead {
+  background:
+    radial-gradient(46rem 34rem at 82% 46%, rgba(192, 75, 232, 0.2), transparent 62%),
+    radial-gradient(38rem 26rem at 0% 0%, rgba(106, 91, 255, 0.24), transparent 60%),
+    var(--bg);
+  border-bottom: 3px solid;
+  border-image: var(--scale) 1;
+}
+.top {
+  display: flex;
+  gap: 1.5rem;
+  padding-block: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.top::-webkit-scrollbar { display: none; }
+.top a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-block: 0.6rem;
+}
+.top a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+.hero {
+  display: grid;
+  gap: 1.5rem 3.5rem;
+  grid-template-areas: "id" "fig" "txt";
+  padding-block: clamp(1rem, 4vw, 3rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+.id {
+  grid-area: id;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.txt { grid-area: txt; }
+.event { grid-area: fig; }
+@media (min-width: 56rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-areas: "id fig" "txt fig";
+    align-content: center;
+  }
+  .id {
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: end;
+    gap: 1.5rem;
+  }
+  .event { align-self: center; }
+}
+.portrait {
+  display: block;
+  flex: none;
+  width: clamp(5.4rem, 22vw, 9rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 4px;
+  background: conic-gradient(from 200deg, #6A5BFF, #C04BE8, #F0508F, #FF8A3C, #FFE45C, #6A5BFF);
+}
+h1 {
+  font-size: clamp(2.3rem, 8.5vw, 4.6rem);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+.role {
+  font-family: var(--sans);
+  color: var(--muted);
+  font-size: clamp(0.92rem, 2.6vw, 1.02rem);
+  line-height: 1.45;
+  margin: 0.7rem 0 0;
+}
+.lead {
+  font-size: clamp(1.2rem, 2.6vw, 1.4rem);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 33rem;
+}
+.about {
+  margin: 1rem 0 0;
+  max-width: 33rem;
+  color: var(--muted);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.3rem;
+  align-items: center;
+  margin: 1.9rem 0 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+.actions a { color: var(--ink); }
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin: 1.2rem 0 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+.profiles a {
+  color: var(--ink);
+  text-decoration-color: var(--s4);
+  text-decoration-thickness: 0.1em;
+  padding-block: 0.3rem;
+}
+.actions .btn {
+  display: inline-block;
+  padding: 0.62rem 1.05rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(241, 238, 251, 0.55);
+  text-decoration: none;
+  font-weight: 500;
+}
+.actions .btn.primary {
+  background: linear-gradient(90deg, #FF8A3C, #FFE45C);
+  border-color: transparent;
+  color: #1B0F2E;
+  font-weight: 600;
+}
+.actions .btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+/* Event display */
+.event { margin: 0; }
+.event canvas {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  cursor: pointer;
+}
+.event figcaption {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 34rem;
+  margin: 0.4rem auto 0;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.8rem;
+  margin-bottom: 0.9rem;
+  color: var(--ink);
+}
+.legend i {
+  flex: 1 1 5rem;
+  min-width: 4rem;
+  height: 0.45rem;
+  border-radius: 1rem;
+  background: var(--scale);
+}
+.legend button {
+  font: inherit;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--raise);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  padding: 0.45rem 0.95rem;
+  cursor: pointer;
+}
+.legend button:hover { border-color: var(--s5); }
+.event figcaption p { margin: 0; }
+
+/* Sections */
+#research { --accent: var(--s1); }
+#publications { --accent: var(--s2); }
+#teaching { --accent: var(--s3); }
+#education { --accent: var(--s4); }
+#honors { --accent: var(--s5); }
+#contact { --accent: var(--s6); }
+.band {
+  display: grid;
+  gap: 1.2rem 3rem;
+  padding-block: clamp(2.2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--line);
+}
+.band:first-child { border-top: 0; }
+@media (min-width: 56rem) {
+  .band { grid-template-columns: 12rem minmax(0, 1fr); }
+  .band > h2 { position: sticky; top: 1.5rem; align-self: start; }
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--accent);
+  text-wrap: balance;
+}
+h2::before {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.body {
+  max-width: 42rem;
+  display: grid;
+  gap: 2.4rem;
+}
+.entry h3 {
+  font-size: 1.32rem;
+  line-height: 1.28;
+  font-weight: 600;
+  margin: 0;
+  text-wrap: balance;
+}
+.entry h3 a { color: inherit; text-decoration-color: var(--accent); }
+.entry h3 a:hover { color: var(--accent); }
+.entry p { margin: 0.85rem 0 0; }
+.entry .meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.1rem 1.2rem;
+  margin: 0.45rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.entry .tools,
+.entry .links {
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+.entry .tools b { font-weight: 600; color: var(--accent); }
+.entry .links { display: flex; flex-wrap: wrap; gap: 0.3rem 1.3rem; }
+.entry .authors { margin: 0.45rem 0 0; }
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0 0.55rem;
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+}
+.tag.journal { color: var(--accent); }
+.tag.preprint { color: var(--muted); }
+
+.group h3 {
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.9rem;
+}
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.95rem;
+}
+.rows li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.15rem 1.5rem;
+  align-items: baseline;
+}
+.rows .when {
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.rows small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.6rem 1.6rem;
+  margin: 0;
+}
+.facts dt {
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  color: var(--muted);
+  padding-top: 0.2rem;
+}
+.facts dd { margin: 0; }
+@media (max-width: 30rem) {
+  .rows li { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  .facts dd { margin-bottom: 0.7rem; }
+}
+.plain { margin: 0; }
+.contact-mail {
+  font-size: clamp(1.25rem, 4.6vw, 1.6rem);
+  overflow-wrap: anywhere;
+}
+address { font-style: normal; }
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.6rem 2.5rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#research">Skip to research</a>
+
+<header class="masthead">
+  <nav class="top wrap" aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching and service</a>
+    <a href="#education">Education</a>
+    <a href="#honors">Honors</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero wrap">
+    <div class="id">
+      <img class="portrait" src="photo.jpg" alt="Ketan Jadav" width="480" height="480">
+      <div>
+        <h1>Ketan Jadav</h1>
+        <p class="role">PhD student, experimental particle physics<br>University of Oklahoma</p>
+      </div>
+    </div>
+
+    <figure class="event">
+      <canvas id="event" width="680" height="680" role="img" aria-label="Animated sketch of a top plus charm event seen along the beam line: a b-jet, a lepton and missing energy on one side, and a charm jet on the other, drawn over the layers of the ATLAS Inner Tracker. Tracks are colored by momentum."></canvas>
+      <figcaption>
+        <div class="legend">
+          <span>Low momentum</span><i aria-hidden="true"></i><span>High</span>
+          <button type="button" id="collide">Collide again</button>
+        </div>
+        <p>A top + charm event, sketched as seen along the beam line. The top quark decays to a b-jet, a lepton and a neutrino that escapes as missing energy, while the charm jet recoils on the other side. Tracks curl in the magnetic field, and tighter curls mean lower momentum. The rings are the five pixel and four strip barrel layers of the ATLAS Inner Tracker.</p>
+      </figcaption>
+    </figure>
+
+    <div class="txt">
+      <p class="lead">I study how top quarks are produced together with charm quarks at the Large Hadron Collider, and I test the high- and low-voltage circuits for the upgraded ATLAS Inner Tracker.</p>
+      <p class="about">I work with Prof. Phillip Gutierrez in the Homer L. Dodge Department of Physics and Astronomy. Before moving to experiment, I worked on quantum field theory in curved spacetime at IISER Bhopal.</p>
+      <p class="actions">
+        <a class="btn primary" href="mailto:ketan.jadav@ou.edu">Email me</a>
+        <a class="btn" href="cv.pdf">Download CV</a>
+      </p>
+      <p class="profiles">
+        <a href="https://inspirehep.net/literature?q=a%20Jadav%2C%20Ketankumar">INSPIRE</a>
+        <a href="https://orcid.org/0009-0008-3128-8832">ORCID</a>
+        <a href="https://www.linkedin.com/in/ketan-jadav-1a1375224/">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="research" class="band wrap">
+    <h2>Research</h2>
+    <div class="body">
+      <article class="entry">
+        <h3>Charge asymmetry in top + charm production</h3>
+        <p class="meta"><span>University of Oklahoma, with Prof. Phillip Gutierrez</span><span>Jan 2025 to present</span></p>
+        <p>I am measuring the charge asymmetry in events where a top quark is produced together with a charm quark. The asymmetry is a probe of the off-diagonal elements of the CKM matrix and of the structure of the proton, and a place where new physics could show up.</p>
+        <p>So far I have generated and analyzed simulated events at leading and next-to-leading order, studying transverse momentum, pseudorapidity and missing transverse energy. Next I will apply machine-learning jet tagging and background filtering to look for the asymmetry in LHC data.</p>
+        <p class="tools"><b>Tools</b> MadGraph, Sherpa, Powheg, ROOT, C++, Python</p>
+      </article>
+
+      <article class="entry">
+        <h3>ATLAS Inner Tracker upgrade: testing high- and low-voltage flex circuits</h3>
+        <p class="meta"><span>University of Oklahoma</span><span>May 2025 to present</span></p>
+        <p>I work on quality assurance for the flexible circuits that carry high and low voltage in the upgraded ATLAS Inner Tracker (ITk). I run electrical tests to find flexes with abnormal resistance, which is linked to variations in copper-layer thickness that affect detector performance.</p>
+        <p>I also apply machine learning to automated visual inspection and defect detection in the flexes. The work connects detector hardware with the physics analysis it makes possible.</p>
+        <p class="tools"><b>Tools</b> Electrical testing, data acquisition systems, cleanroom procedures, machine-learning visual inspection</p>
+      </article>
+
+      <article class="entry">
+        <h3>Two-loop Vilkovisky-DeWitt effective action for a scalar field coupled to gravity</h3>
+        <p class="meta"><span>Master's thesis, IISER Bhopal, with Prof. Sukanta Panda</span><span>Jul 2022 to Apr 2023</span></p>
+        <p>I studied quantum field theory in curved spacetime as a low-energy limit of quantum gravity, relevant to the physics of the early universe. I extended the Vilkovisky-DeWitt covariant effective action to two loops for a minimally coupled scalar field, derived its divergent part, and carried out mass renormalization while keeping the off-shell effective action covariant and gauge invariant.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="band wrap">
+    <h2>Publications</h2>
+    <div class="body">
+      <article class="entry">
+        <h3><a href="https://iopscience.iop.org/article/10.1088/1751-8121/adb8ac">One-particle irreducibility of Vilkovisky-DeWitt effective action</a></h3>
+        <p class="authors">Sukanta Panda, Abbas Tinwala and <b>Ketankumar Jadav</b></p>
+        <p class="meta"><span><span class="tag journal">Journal article</span>Journal of Physics A: Mathematical and Theoretical 58, 105401 (2025)</span></p>
+        <p class="links">
+          <a href="https://iopscience.iop.org/article/10.1088/1751-8121/adb8ac">Journal page</a>
+          <a href="https://arxiv.org/abs/2406.16105">arXiv:2406.16105</a>
+          <a href="https://inspirehep.net/literature/2801565">INSPIRE record</a>
+        </p>
+      </article>
+
+      <article class="entry">
+        <h3><a href="https://arxiv.org/abs/2304.08425">Two-loop Vilkovisky-DeWitt effective action for scalar field minimally coupled with gravity</a></h3>
+        <p class="authors"><b>Ketankumar Jadav</b>, Sukanta Panda and Abbas Altafhussain Tinwala</p>
+        <p class="meta"><span><span class="tag preprint">Preprint</span>arXiv, April 2023</span></p>
+        <p class="links">
+          <a href="https://arxiv.org/abs/2304.08425">arXiv:2304.08425</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="teaching" class="band wrap">
+    <h2>Teaching and service</h2>
+    <div class="body">
+      <ul class="rows">
+        <li>
+          <span>Treasurer, GPSI
+            <small>The graduate student association of the Homer L. Dodge Department of Physics and Astronomy</small>
+          </span>
+          <span class="when">Nov 2026 to present</span>
+        </li>
+        <li>
+          <span>Grader, PHYS 2514
+            <small>General Physics for Engineering and Science Majors, University of Oklahoma</small>
+          </span>
+          <span class="when">Fall 2024, Spring 2025</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" class="band wrap">
+    <h2>Education</h2>
+    <div class="body">
+      <article class="entry">
+        <h3>Ph.D. in Physics</h3>
+        <p class="meta"><span>University of Oklahoma, Norman</span><span>Aug 2024 to present</span></p>
+        <p>GPA 4.00/4.00. Passed all three qualifying exams on the first attempt: Quantum Mechanics and Classical and Statistical Mechanics in Spring 2025, and Electrodynamics in Fall 2025.</p>
+      </article>
+      <article class="entry">
+        <h3>BS-MS Dual Degree in Physics</h3>
+        <p class="meta"><span>Indian Institute of Science Education and Research Bhopal</span><span>Jul 2018 to May 2023</span></p>
+        <p>CPI 9.32/10.</p>
+      </article>
+      <div class="group">
+        <h3>Skills</h3>
+        <dl class="facts">
+          <dt>Programming</dt><dd>Python, C++, ROOT</dd>
+          <dt>Machine learning</dt><dd>CNNs, TensorFlow, Keras</dd>
+          <dt>Experimental</dt><dd>Cleanroom procedures, soldering</dd>
+          <dt>Software</dt><dd>LaTeX, Mathematica, Git, Origin</dd>
+          <dt>Languages</dt><dd>English, Gujarati, Hindi</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="honors" class="band wrap">
+    <h2>Honors</h2>
+    <div class="body">
+      <div class="group">
+        <h3>Awards</h3>
+        <ul class="rows">
+          <li><span>All India Rank 188, CSIR-UGC NET Physics</span><span class="when">Jun 2023</span></li>
+          <li><span>INSPIRE Fellowship, Government of Gujarat<small>Top 1 percent in class 12</small></span><span class="when">2017</span></li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Schools and presentations</h3>
+        <ul class="rows">
+          <li><span>Poster, Annual In-House Symposium<small>Department of Physics, IISER Bhopal</small></span><span class="when">2023</span></li>
+          <li><span>Soft skills and career development workshop<small>IISER Bhopal</small></span><span class="when">2023</span></li>
+          <li><span>IUCAA Summer School<small>IUCAA Pune, held online</small></span><span class="when">2020</span></li>
+          <li><span>National Science Camp (VIJYOSHI)<small>Held at IISER Bhopal by IISc Bengaluru</small></span><span class="when">2018</span></li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Outside physics: competitive yoga</h3>
+        <ul class="rows">
+          <li><span>National Bronze Medal, 59th National School Games</span><span class="when">2014</span></li>
+          <li><span>International Silver Medal, World Federation of Yoga and Culture</span><span class="when">2013</span></li>
+          <li><span>National Gold Medal, Open National Yogasan Championship</span><span class="when">2012</span></li>
+          <li><span>National Silver Medal, Open National Yogasan Championship</span><span class="when">2011</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="band wrap">
+    <h2>Contact</h2>
+    <div class="body">
+      <p class="plain contact-mail"><a href="mailto:ketan.jadav@ou.edu">ketan.jadav@ou.edu</a></p>
+      <address>
+        Homer L. Dodge Department of Physics and Astronomy<br>
+        University of Oklahoma<br>
+        440 W. Brooks St., Norman, OK 73019
+      </address>
+      <p class="plain">Full name on papers: Ketankumar M. Jadav. Find me on <a href="https://inspirehep.net/literature?q=a%20Jadav%2C%20Ketankumar">INSPIRE</a>, <a href="https://orcid.org/0009-0008-3128-8832">ORCID</a> and <a href="https://www.linkedin.com/in/ketan-jadav-1a1375224/">LinkedIn</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Ketan Jadav, 2026. Last updated November 2026.</div>
+</footer>
+
+<script>
+/* Event display: a schematic top + charm event, redrawn at random on request. */
+(function () {
+  var cv = document.getElementById("event");
+  if (!cv || !cv.getContext) { return; }
+  var ctx = cv.getContext("2d");
+  var button = document.getElementById("collide");
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var STOPS = [[106, 91, 255], [192, 75, 232], [240, 80, 143], [255, 138, 60], [255, 228, 92]];
+  var PIXEL = [0.039, 0.099, 0.16, 0.228, 0.291];   /* barrel radii, in units of the outer strip layer */
+  var STRIP = [0.405, 0.562, 0.762, 1];
+  var TAU = Math.PI * 2;
+  var DEG = Math.PI / 180;
+  var W = 0, H = 0, dpr = 1, fs = 14;
+  var ev = null, raf = 0, t0 = 0, done = false, seed = 20240801;
+
+  function rng(a) {
+    return function () {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      var t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  function clamp(x) { return Math.max(0, Math.min(1, x)); }
+  function ease(x) { return 1 - Math.pow(1 - x, 3); }
+  function color(t, alpha) {
+    t = clamp(t);
+    var x = t * (STOPS.length - 1);
+    var i = Math.min(STOPS.length - 2, Math.floor(x));
+    var f = x - i, p = STOPS[i], q = STOPS[i + 1];
+    return "rgba(" + Math.round(p[0] + (q[0] - p[0]) * f) + "," + Math.round(p[1] + (q[1] - p[1]) * f) + "," +
+      Math.round(p[2] + (q[2] - p[2]) * f) + "," + alpha + ")";
+  }
+
+  function build(first) {
+    var r = rng(seed);
+    var rel = { c: 205, b: 62, l: -18, m: 15 };
+    var rot = 0, tries = 0;
+    if (!first) {
+      rel.b += (r() - 0.5) * 24;
+      rel.l += (r() - 0.5) * 16;
+      rel.m += (r() - 0.5) * 12;
+      do {
+        rot = r() * 360;
+        tries++;
+      } while (tries < 40 && (Math.abs(Math.cos((rel.c + rot) * DEG)) > 0.92 || Math.abs(Math.cos((rel.b + rot) * DEG)) > 0.92));
+    }
+    function at(a) { return (a + rot) * DEG; }
+    var tracks = [], towers = [], i;
+
+    for (i = 0; i < 56; i++) {
+      var R = 0.13 + r() * r() * 0.5;
+      tracks.push({ phi: r() * TAU, R: R, s: r() < 0.5 ? 1 : -1, end: Math.min(1.03, 1.92 * R),
+        t: (R - 0.13) / 0.5 * 0.42, w: 1, o: 0.7, d: r() * 0.35 });
+    }
+    function jet(axis, count, hard) {
+      var k, j;
+      for (k = 0; k < count; k++) {
+        var Rj = 0.9 + Math.pow(r(), 2) * 5 * hard;
+        var spread = (r() + r() + r() - 1.5) * 9 * DEG;
+        tracks.push({ phi: axis + spread, R: Rj, s: r() < 0.5 ? 1 : -1, end: 1.03,
+          t: 0.45 + Math.min(0.4, Math.log(Rj / 0.9) / Math.log(6) * 0.4), w: 1.5, o: 0.95, d: 0.05 + r() * 0.25 });
+      }
+      for (j = -3; j <= 3; j++) {
+        var h = Math.exp(-j * j / 3.2) * (0.13 + r() * 0.07) * hard;
+        towers.push({ a: axis + j * 3.4 * DEG, h: h, t: 0.4 + h * 3 });
+      }
+    }
+    jet(at(rel.b), 10, 1);
+    jet(at(rel.c), 8, 0.9);
+    for (i = 0; i < 16; i++) {
+      towers.push({ a: r() * TAU, h: 0.008 + r() * 0.03, t: 0.05 + r() * 0.2 });
+    }
+    tracks.push({ phi: at(rel.l), R: 22, s: 1, end: 1.44, t: 1, w: 2.6, o: 1, d: 0.1 });
+
+    ev = {
+      tracks: tracks,
+      towers: towers,
+      met: at(rel.m),
+      labels: [
+        { a: at(rel.b), r: 1.5, text: "b-jet" },
+        { a: at(rel.c), r: 1.5, text: "charm jet" },
+        { a: at(rel.l), r: 1.56, text: "lepton" },
+        { a: at(rel.m), r: 1.19, text: "missing energy" }
+      ]
+    };
+  }
+
+  /* Point on a track after it has turned through angle th; y points up. */
+  function point(tr, th) {
+    var c = Math.cos(tr.phi), s = Math.sin(tr.phi);
+    var a = Math.sin(th), b = tr.s * (1 - Math.cos(th));
+    return [tr.R * (c * a - s * b), tr.R * (s * a + c * b)];
+  }
+
+  function ring(cx, cy, radius) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, TAU);
+    ctx.stroke();
+  }
+
+  function draw(t) {
+    var cx = W / 2, cy = H / 2, u = Math.min(W, H) * 0.335;
+    var i, j;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = "source-over";
+    ctx.lineCap = "butt";
+    ctx.lineJoin = "round";
+    ctx.setLineDash([]);
+
+    ctx.lineWidth = 0.24 * u;
+    ctx.strokeStyle = "rgba(142,139,255,0.09)";
+    ring(cx, cy, 1.19 * u);
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "rgba(142,139,255,0.28)";
+    ring(cx, cy, 1.07 * u);
+    ring(cx, cy, 1.31 * u);
+    ctx.strokeStyle = "rgba(142,139,255,0.42)";
+    ctx.setLineDash([11, 3]);
+    for (i = 0; i < STRIP.length; i++) { ring(cx, cy, STRIP[i] * u); }
+    ctx.setLineDash([]);
+    ctx.strokeStyle = "rgba(160,170,255,0.7)";
+    for (i = 0; i < PIXEL.length; i++) { ring(cx, cy, PIXEL[i] * u); }
+
+    ctx.globalCompositeOperation = "lighter";
+    ctx.lineCap = "round";
+    for (i = 0; i < ev.tracks.length; i++) {
+      var tr = ev.tracks[i];
+      var p = ease(clamp((t - tr.d * 0.6) / 0.62));
+      if (p <= 0) { continue; }
+      var th = 2 * Math.asin(Math.min(1, tr.end / (2 * tr.R))) * p;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      for (j = 1; j <= 22; j++) {
+        var q = point(tr, th * j / 22);
+        ctx.lineTo(cx + q[0] * u, cy - q[1] * u);
+      }
+      ctx.lineWidth = tr.w * 4.5;
+      ctx.strokeStyle = color(tr.t, 0.1);
+      ctx.stroke();
+      ctx.lineWidth = tr.w;
+      ctx.strokeStyle = color(tr.t, tr.o);
+      ctx.stroke();
+    }
+
+    var grow = ease(clamp((t - 0.5) / 0.45));
+    ctx.lineCap = "butt";
+    if (grow > 0) {
+      ctx.lineWidth = Math.max(2, 3.4 * DEG * 1.1 * u * 0.8);
+      for (i = 0; i < ev.towers.length; i++) {
+        var tw = ev.towers[i];
+        var r1 = 1.085 * u, r2 = (1.085 + tw.h * grow) * u;
+        ctx.beginPath();
+        ctx.moveTo(cx + r1 * Math.cos(tw.a), cy - r1 * Math.sin(tw.a));
+        ctx.lineTo(cx + r2 * Math.cos(tw.a), cy - r2 * Math.sin(tw.a));
+        ctx.strokeStyle = color(tw.t, 0.9);
+        ctx.stroke();
+      }
+    }
+
+    ctx.globalCompositeOperation = "source-over";
+    var show = clamp((t - 0.6) / 0.3);
+    if (show > 0) {
+      var mc = Math.cos(ev.met), ms = Math.sin(ev.met);
+      ctx.strokeStyle = "rgba(241,238,251," + show + ")";
+      ctx.fillStyle = "rgba(241,238,251," + show + ")";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([7, 5]);
+      ctx.beginPath();
+      ctx.moveTo(cx + 0.08 * u * mc, cy - 0.08 * u * ms);
+      ctx.lineTo(cx + 0.85 * u * mc, cy - 0.85 * u * ms);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      var tipx = cx + 0.93 * u * mc, tipy = cy - 0.93 * u * ms;
+      var bx = cx + 0.84 * u * mc, by = cy - 0.84 * u * ms;
+      ctx.beginPath();
+      ctx.moveTo(tipx, tipy);
+      ctx.lineTo(bx - 6 * ms, by - 6 * mc);
+      ctx.lineTo(bx + 6 * ms, by + 6 * mc);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    ctx.fillStyle = "rgba(255,255,255,0.22)";
+    ctx.beginPath(); ctx.arc(cx, cy, 8, 0, TAU); ctx.fill();
+    ctx.fillStyle = "#FFFFFF";
+    ctx.beginPath(); ctx.arc(cx, cy, 2.5, 0, TAU); ctx.fill();
+
+    var la = clamp((t - 0.7) / 0.3);
+    if (la > 0) {
+      ctx.font = "500 " + fs + "px 'IBM Plex Sans', system-ui, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      for (i = 0; i < ev.labels.length; i++) {
+        var L = ev.labels[i];
+        var c = Math.cos(L.a), s = Math.sin(L.a);
+        var w = ctx.measureText(L.text).width;
+        var x = cx + L.r * u * c, y = cy - L.r * u * s;
+        if (Math.abs(c) > 0.8) { y += (s >= 0 ? -1 : 1) * 26; }
+        x = Math.max(w / 2 + 5, Math.min(W - w / 2 - 5, x));
+        y = Math.max(fs * 0.7 + 3, Math.min(H - fs * 0.7 - 3, y));
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "rgba(12,10,31," + (0.92 * la) + ")";
+        ctx.strokeText(L.text, x, y);
+        ctx.fillStyle = "rgba(241,238,251," + la + ")";
+        ctx.fillText(L.text, x, y);
+      }
+    }
+  }
+
+  function frame(now) {
+    var t = still ? 1 : clamp((now - t0) / 1700);
+    draw(t);
+    if (t < 1) { raf = requestAnimationFrame(frame); }
+    else { done = true; }
+  }
+  function play() {
+    cancelAnimationFrame(raf);
+    done = false;
+    raf = requestAnimationFrame(function (now) { t0 = now; frame(now); });
+  }
+  function size() {
+    var box = cv.getBoundingClientRect();
+    var w = Math.round(box.width), h = Math.round(box.height);
+    if (!w || !h || (w === W && h === H)) { return; }
+    W = w; H = h;
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.round(W * dpr);
+    cv.height = Math.round(H * dpr);
+    fs = W < 420 ? 12 : 14;
+    if (done) { draw(1); }
+  }
+  function collide() {
+    seed = Math.floor(Math.random() * 1e9);
+    build(false);
+    play();
+  }
+
+  build(true);
+  size();
+  play();
+  window.addEventListener("resize", size);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () { if (done) { draw(1); } });
+  }
+  button.addEventListener("click", collide);
+  cv.addEventListener("click", collide);
+})();
+</script>
+</body>
+</html>
